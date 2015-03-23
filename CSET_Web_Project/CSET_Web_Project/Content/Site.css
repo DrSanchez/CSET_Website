@@ -1,0 +1,49 @@
+﻿body 
+{
+    padding-top: 50px;
+    padding-bottom: 20px;
+    color: #FFF;
+	background-color: #000020; /*rgb(15, 12, 56);*/
+    background-image: url(cset_website_background.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+    font-size: 1.7em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content 
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 90%;
+}
+img
+{
+	-webkit-align-content: center;
+		-ms-align-content: center;
+			align-content: center;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+	width: 100%;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt 
+{
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea 
+{
+    max-width: 280px;
+}
