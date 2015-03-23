@@ -15,12 +15,15 @@
 		@Html.Partial("_NavbarPartial")
 	</div>
 
-	<div class="container body-content">
+	<div class="container body-content" style="border-width:thick; border-style:outset;">
 		@RenderSection("featured", required: false)
 		@RenderBody()
 		<hr />
-		<footer>
-			<p>&copy; @DateTime.Now.Year - CSET Website</p>
+		<footer style="padding-bottom: 0.5%; margin-bottom: 0.25%; text-align: center; font-size: 90%;">
+			<p style ="padding-bottom: 0.5%; margin-bottom: 0.25%;">Copyright &#169; OIT CSET 2011-@DateTime.Now.Year<hr /></p>
+			<a href="http://www.oit.edu">OIT Home</a> |
+			<a href="http://my.oit.edu">My OIT Home</a> |
+			<a href="http://e5.onthehub.com/WebStore/Welcome.aspx?ws=41deffc0-d19b-e011-969d-0030487d8897&utm_campaign=oth-widgets&utm_medium=school-finder&utm_source=Computer%20Systems%20Engineering%20Technology%20-%20O.I.T.%20-%20DreamSpark%20Premium&JSEnabled=1">MSDNAA Portal</a>
 		</footer>
 	</div>
 

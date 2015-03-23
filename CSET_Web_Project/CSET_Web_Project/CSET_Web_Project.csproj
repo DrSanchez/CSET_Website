@@ -161,6 +161,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DegreeController.cs" />
+    <Compile Include="Controllers\FacultyController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -175,6 +176,7 @@
     <Compile Include="Models\DegreeTypeModel.cs" />
     <Compile Include="Models\FacultyModel.cs" />
     <Compile Include="Models\FAQCatagoryModel.cs" />
+    <Compile Include="Models\HtmlHelpers\HtmlHelper.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\LabModels.cs" />
@@ -307,6 +309,7 @@
     <Content Include="Views\Degrees\Index.cshtml" />
     <Content Include="Views\Degrees\SoftwareDegree.cshtml" />
     <Content Include="Views\Shared\_NavbarPartial.cshtml" />
+    <Content Include="Views\Faculty\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
