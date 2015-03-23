@@ -306,6 +306,7 @@
     <Content Include="Views\Degrees\HardwareDegree.cshtml" />
     <Content Include="Views\Degrees\Index.cshtml" />
     <Content Include="Views\Degrees\SoftwareDegree.cshtml" />
+    <Content Include="Views\Shared\_NavbarPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
