@@ -49,3 +49,19 @@ textarea
     max-width: 280px;
 }
 
+.degree-tile
+{
+	-webkit-align-content:center;
+		-ms-align-content:center;
+			align-content:center;
+	width: 95%;
+	margin-right:0.05%;
+	margin-left:0.05%;
+	padding-left:0.05%;
+	padding-right:0.05%;
+}
+
+.center-filled-div
+{
+
+}

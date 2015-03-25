@@ -14,10 +14,11 @@
 				<li>@Html.ActionLink("About CSET", "About", "Home")</li>
 				<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
 				<li>@Html.ActionLink("Faculty", "Index", "Faculty")</li>
-				@*@Html.ActionLink("Degrees", "Index", "Degrees")*@
 				<li class="dropdown">
-					<a href="~/Degrees/Index" class="dropdown-toggle" id="dropdownCommonMenu" data-toggle="dropdown" data-hover="dropdown" data-delay="700">Degrees<b class="caret" style="font-size:14px"></b></a>
+					<a href="#" class="dropdown-toggle" id="dropdownCommonMenu" data-toggle="dropdown" data-hover="dropdown" data-delay="700">Degrees<b class="caret" style="font-size:14px"></b></a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCommonMenu">
+						<li role="menuitem">@Html.ActionLink("Degrees", "Index", "Degrees")</li>
+						<li class="divider"></li>
 						<li role="menuitem">@Html.ActionLink("Hardware Engineering Technology", "HardwareDegree", "Degrees")</li>
 						<li role="menuitem">@Html.ActionLink("Software Engineering Technology", "SoftwareDegree", "Degrees")</li>
 						<li role="menuitem">@Html.ActionLink("Embedded System Engineering", "EmbeddedDegree", "Degrees")</li>

@@ -201,6 +201,12 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\cset_website_background.png" />
     <Content Include="Content\cset_website_banner_image.png" />
+    <Content Include="Content\dual_degree_tile.png" />
+    <Content Include="Content\embedded_degree_tile.png" />
+    <Content Include="Content\hardware_degree_tile.png" />
+    <Content Include="Content\hover-min.css" />
+    <Content Include="Content\hover.css" />
+    <Content Include="Content\software_degree_tile.png" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
     <Content Include="Content\themes\base\autocomplete.css" />

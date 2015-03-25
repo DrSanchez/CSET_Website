@@ -1,10 +1,45 @@
 ﻿@*model csetMVC2011.Models.Degree*@
 
 @{
-    ViewBag.Title = "Degrees";
+	ViewBag.Title = "Degrees";
 }
 
-<h1>Degrees</h1>
-<div class="body-content">
-	
+<h1 style="-ms-align-content:center; -webkit-align-content:center; align-content:center; text-align:center">Degrees</h1>
+
+<div class="row center-filled-div">
+	<div class="col-md-3">
+
+		<div class="degree-tile hvr-grow">
+			<a href="~/Degrees/HardwareDegree">
+				<img src="~/Content/hardware_degree_tile.png" />
+			</a>
+		</div>
+
+	</div>
+	<div class="col-md-4">
+
+		<div class="degree-tile hvr-grow">
+			<a href="~/Degrees/SoftwareDegree">
+				<img src="~/Content/software_degree_tile.png" />
+			</a>
+		</div>
+
+		<hr />
+
+		<div class="degree-tile hvr-grow">
+			<a href="~/Degrees/EmbeddedDegree">
+				<img src="~/Content/embedded_degree_tile.png" />
+			</a>
+		</div>
+
+	</div>
+	<div class="col-md-3">
+
+		<div class="degree-tile hvr-grow">
+			<a href="~/Degrees/ConcurrentDegree">
+				<img src="~/Content/dual_degree_tile.png" />
+			</a>
+		</div>
+
+	</div>
 </div>

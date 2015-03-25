@@ -48,6 +48,7 @@ namespace CSET_Web_Project
 
 			bundles.Add(new StyleBundle("~/Content/css").Include(
 					  "~/Content/bootstrap.css",
+					  "~/Content/hover.css",
 					  "~/Content/Site.css"));
 		}
 	}
