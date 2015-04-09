@@ -7,22 +7,29 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			@Html.ActionLink("CSET Main", "Index", "Home", null, new { @class = "navbar-brand" })
+			<a class="hvr-rectangle-in">@Html.ActionLink("CSET Main", "Index", "Home", null, new { @class = "navbar-brand" })</a>
 		</div>
 		<div class="navbar-collapse collapse">
 			<ul class="nav navbar-nav">
-				<li>@Html.ActionLink("About CSET", "About", "Home")</li>
-				<li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-				<li>@Html.ActionLink("Faculty", "Index", "Faculty")</li>
+				<li class="hvr-reveal">@Html.ActionLink("About CSET", "About", "Home")</li>
+				<li class="hvr-reveal">@Html.ActionLink("Contact", "Contact", "Home")</li>
+				<li class="hvr-reveal">@Html.ActionLink("Faculty", "Index", "Faculty")</li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle" id="dropdownCommonMenu" data-toggle="dropdown" data-hover="dropdown" data-delay="700">Degrees<b class="caret" style="font-size:14px"></b></a>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownCommonMenu">
+					<a href="#" class="dropdown-toggle hvr-underline-from-center" id="dropdownDegreeMenu" data-toggle="dropdown" data-hover="dropdown" data-delay="700">Degrees<b class="caret" style="font-size:14px"></b></a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownDegreeMenu">
 						<li role="menuitem">@Html.ActionLink("Degrees", "Index", "Degrees")</li>
 						<li class="divider"></li>
 						<li role="menuitem">@Html.ActionLink("Hardware Engineering Technology", "HardwareDegree", "Degrees")</li>
 						<li role="menuitem">@Html.ActionLink("Software Engineering Technology", "SoftwareDegree", "Degrees")</li>
 						<li role="menuitem">@Html.ActionLink("Embedded System Engineering", "EmbeddedDegree", "Degrees")</li>
 						<li role="menuitem">@Html.ActionLink("5-Year Concurrent Degree", "ConcurrentDegree", "Degrees")</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#" class="dropdown-toggle hvr-underline-from-center" id="dropdownResourcesMenu" data-toggle="dropdown" data-hover="dropdown" data-delay="700">Resources<b class="caret" style="font-size:14px"></b></a>
+					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownResourcesMenu">
+						<li role="menuitem">@Html.ActionLink("Resources", "Index", "Resources")</li>
+						<li class="divider"></li>
 					</ul>
 				</li>
 			</ul>

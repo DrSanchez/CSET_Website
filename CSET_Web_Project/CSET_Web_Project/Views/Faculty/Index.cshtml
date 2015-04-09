@@ -5,3 +5,73 @@
 
 <h2>Faculty</h2>
 
+<div class="row center-filled-div" style="margin:auto;">
+	<div class="col-md-3">
+		@*<div class="row" style="width:90%;margin-right:auto;margin-left:auto;border:ridge;border-width:medium;">
+			<div class="col-md-1" style="display: inline;">
+				<img class="facultyTile" src="~/Content/ProfileImage.jpg" />
+			</div>
+			<div class="col-md-3 center-filled-div" style="display: inline;">
+				<h2 style="text-align:center; vertical-align:middle; font-size: 95%;">Professor Name</h2>
+			</div>
+		</div>*@
+		<div class="facultyTile row">
+			<img class="facultySmall col-md-1" style="display: inline;" src="~/Content/ProfileImage.jpg"/>
+			<div class="col-md-4">
+				<table border="0" cellpadding="6" cellspacing="0">
+					<tr style="align-content: center; text-align: center;"><td><a style="text-align: center;" href="/Faculty/Profile">Calvin Caldwell</a></td></tr> @*this a href link will be dynamically loaded based on faculty id value*@
+					<tr>
+						<td align="right">Office Phone: </td>
+						<td style="padding-left: 2em;">885-1598</td>
+					</tr>
+				</table>
+			</div>
+			@*<h2 class="col-md-4" style="text-align:center; display: inline; font-size: 85%;">Professor Name</h2>*@
+		</div>
+	</div>
+	<div class="col-md-3">
+		@*<div class="row" style="width:90%;margin-right:auto;margin-left:auto;border:ridge;border-width:medium;">
+			<div class="col-md-1" style="display: inline;">
+				<img class="facultyTile" src="~/Content/ProfileImage.jpg" />
+			</div>
+			<div class="col-md-3 center-filled-div" style="display: inline;">
+				<h2 style="text-align:center; vertical-align:middle; font-size: 95%	;">Professor Name</h2>
+			</div>
+		</div>*@
+		<div>
+
+		</div>
+	</div>
+</div>
+
+@* short view *@
+@* reference code for building prototype faculty tile object *@
+@*<tr>
+	<td><a href="/Faculty/Profile/@i.FacultyId">View Profile</a></td>
+	<td><img src="/Content/Images/@i.ImageFile.PathThumb" alt="@i.FirstName" class="medSquare" /></td>
+	<td>@i.FirstName @i.LastName</td>
+	<td>@i.Phone</td>
+	<td>@i.Office</td>
+</tr>*@
+
+@* extended profile *@
+@*<img src="/Content/Images/@Model.ImageFile.PathName" alt="@Model.FirstName" class="medSquare" /><br />
+<b>Preffered Name: </b>@Model.PreferredName<br />
+<b>Title: </b>@Model.Title<br />
+<b>Office Room Number: </b>@Model.Office<br />
+<b>Phone Number: </b>@Model.Phone<br />
+<b>Email: </b><a href="mailto:@Model.Email">@Model.Email</a><br />
+<b>Website: </b><a href="@Model.Website">@Model.Website</a><br />
+<b>Degrees:</b><br />
+<ul>
+	@foreach (var i in Model.Degrees)
+	{
+		<li>@i</li>
+	}
+</ul>
+<b>Classes Taught:</b><br />
+<ul>
+	@foreach (var i in Model.CoursesTaught)
+	{
+		<li>@i.ShortName - @i.LongName <a href="/Degrees/CourseDetails/@i.Id">Details</a></li>
+	}*@

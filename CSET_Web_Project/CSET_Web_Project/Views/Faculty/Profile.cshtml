@@ -1,0 +1,32 @@
+﻿@*@CSET_WEB_PROJECT.Models.Faculty*@
+@{
+    ViewBag.Title = "Profile";
+}
+
+<h2>Profile</h2>
+
+<div>
+
+</div>
+
+@* extended profile *@
+@*<img src="/Content/Images/@Model.ImageFile.PathName" alt="@Model.FirstName" class="medSquare" /><br />
+	<b>Preffered Name: </b>@Model.PreferredName<br />
+	<b>Title: </b>@Model.Title<br />
+	<b>Office Room Number: </b>@Model.Office<br />
+	<b>Phone Number: </b>@Model.Phone<br />
+	<b>Email: </b><a href="mailto:@Model.Email">@Model.Email</a><br />
+	<b>Website: </b><a href="@Model.Website">@Model.Website</a><br />
+	<b>Degrees:</b><br />
+	<ul>
+		@foreach (var i in Model.Degrees)
+		{
+			<li>@i</li>
+		}
+	</ul>
+	<b>Classes Taught:</b><br />
+	<ul>
+		@foreach (var i in Model.CoursesTaught)
+		{
+			<li>@i.ShortName - @i.LongName <a href="/Degrees/CourseDetails/@i.Id">Details</a></li>
+		}*@

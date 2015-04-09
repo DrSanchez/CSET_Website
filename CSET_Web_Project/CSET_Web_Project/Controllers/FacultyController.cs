@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using CSET_Web_Project.Models;
 
 namespace CSET_Web_Project.Controllers
 {
@@ -11,7 +12,19 @@ namespace CSET_Web_Project.Controllers
         // GET: Faculty
         public ActionResult Index()
         {
-            return View();
+            return View(/*Faculty.GetAllActiveFaculty()*/);
         }
+
+		public ActionResult Profile(/*uint id*/)
+		{
+			try
+			{
+				return View(/*new Faculty((int) id)*/);
+			}
+			catch
+			{
+				return View("Page not found...");
+			}
+		}
     }
 }

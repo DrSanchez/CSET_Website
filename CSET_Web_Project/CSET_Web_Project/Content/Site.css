@@ -61,7 +61,45 @@ textarea
 	padding-right:0.05%;
 }
 
+.facultyTile
+{
+	-webkit-align-content:center;
+		-ms-align-content:center;
+			align-content:center;
+	border: ridge;
+	border-width: medium;
+	width: 90%;
+	height: 90%;
+	margin: 0.05%;
+	padding: 0.05%;
+}
+
+img.facultySmall
+{
+	height: 50%;
+	width: 50%;
+	margin: 0.05%;
+	padding: 0.05%;
+}
+
 .center-filled-div
 {
-
+	-webkit-align-content:center;
+		-ms-align-content:center;
+			align-content:center;
+	width: 95%;
+	height: 95%;
+	margin: auto;
 }
+/* centered columns styles */
+/*.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+   /* text-align:left;
+    /* inline-block space fix */
+   /* margin-right:-4px;
+}*/
