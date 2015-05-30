@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>@ViewBag.Title - My ASP.NET MVC Application</title>
+	<title>OIT CSET: @ViewBag.Title</title>
 	<link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @RenderSection("meta", false)
 	@Styles.Render("~/Content/css")
 	@Scripts.Render("~/bundles/modernizr")
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="~/Scripts/ViewHelpers/navbar-helper.js"></script>
+    @RenderSection("head", required: false)
 </head>
 <body>
 	<div class="container">
@@ -15,7 +19,7 @@
 		@Html.Partial("_NavbarPartial")
 	</div>
 
-	<div class="container body-content" style="border-width:thick; border-style:outset;">
+	<div class="container body-content" id="mainBodyContainer" style="border-width:thick; border-style:outset;">
 		@RenderSection("featured", required: false)
 		@RenderBody()
 		<hr />

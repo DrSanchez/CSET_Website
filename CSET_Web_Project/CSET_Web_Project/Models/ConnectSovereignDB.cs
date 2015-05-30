@@ -5,7 +5,7 @@ using System.Web;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace csetMVC2011.Models
+namespace CSET_Web_Project.Models
 {
     //This class was created to simplify connecting to the Server SOVEREIGN
     /* Use instructions:
@@ -35,7 +35,8 @@ namespace csetMVC2011.Models
         //Used to actually connect to the Server and DB
         public void OpenConnection()
         {
-            string temp = "data source=SOVEREIGN-NEW; initial catalog=" + catalogue + "; integrated security=no; user id=sa; pwd=archer->;";
+            //string temp = "data source=SOVEREIGN-NEW; initial catalog=" + catalogue + "; integrated security=no; user id=sa; pwd=archer->;";
+			string temp = "Data Source=DRSANCHEZ;Initial Catalog=csetweb;Integrated Security=True";
             //Create connection string and attempt to connect
             myConnection = new SqlConnection(temp);
             try

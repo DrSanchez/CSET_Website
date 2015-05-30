@@ -9,17 +9,18 @@ namespace CSET_Web_Project.Controllers
 {
     public class FacultyController : Controller
     {
-        // GET: Faculty
+        // GET: /Faculty/
         public ActionResult Index()
         {
-            return View(/*Faculty.GetAllActiveFaculty()*/);
+            return View(Faculty.GetAllActiveFaculty());
         }
 
-		public ActionResult Profile(/*uint id*/)
+		// GET: /Faculty/Profile
+		public ActionResult Profile(uint id)
 		{
 			try
 			{
-				return View(/*new Faculty((int) id)*/);
+				return View(new Faculty((int) id));
 			}
 			catch
 			{

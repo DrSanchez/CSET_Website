@@ -27,7 +27,7 @@ using System.Web.Mvc;
 using System.Data.SqlClient;
 using System.Data;
 
-namespace csetMVC2011.Models
+namespace CSET_Web_Project.Models
 {
     //Need to find way to secure the access that is made here so that the user has to input his/her password to view the data
     //Right now all you need to know is someone's username to access their print quota.

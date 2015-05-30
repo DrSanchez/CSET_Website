@@ -1,9 +1,13 @@
-﻿@*@CSET_WEB_PROJECT.Models.Faculty*@
+﻿@model CSET_Web_Project.Models.Faculty
+@section meta
+{
+	<meta name="Description" content="@Model.FirstName @Model.LastName's Profile" />
+}
 @{
-    ViewBag.Title = "Profile";
+	ViewBag.Title = "Faculty Profile - " + Model.FirstName + " " + Model.LastName;
 }
 
-<h2>Profile</h2>
+<h2>@Model.FirstName @Model.LastName</h2>
 
 <div>
 
