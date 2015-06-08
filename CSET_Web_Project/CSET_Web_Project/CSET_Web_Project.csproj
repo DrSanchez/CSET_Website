@@ -334,7 +334,8 @@
     <Content Include="Scripts\respond.matchmedia.addListener.js" />
     <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Scripts\ViewHelpers\navbar-helper.js" />
+    <Content Include="Scripts\ViewHelpers\NavbarHelper.js" />
+    <Content Include="Scripts\ViewHelpers\ResourceHelper.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

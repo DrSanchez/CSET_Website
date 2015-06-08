@@ -15,7 +15,7 @@
 				<li class="hvr-reveal">@Html.ActionLink("Contact", "Contact", "Home")</li>
 				<li class="hvr-reveal">@Html.ActionLink("Faculty", "Index", "Faculty")</li>
 				<li class="dropdown">
-					<a href="#" class="dropdown-toggle hvr-underline-from-center" id="dropdownDegreeMenu" data-toggle="dropdown" data-hover="dropdown" data-delay="700">Degrees<b class="caret" style="font-size:14px"></b></a>
+					<a href="/Degrees/Index" class="dropdown-toggle hvr-underline-from-center disabled" id="dropdownDegreeMenu" data-toggle="dropdown" data-hover="dropdown" data-delay="700">Degrees<b class="caret" style="font-size:14px"></b></a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownDegreeMenu">
 						<li role="menuitem">@Html.ActionLink("Degrees", "Index", "Degrees")</li>
 						<li class="divider"></li>
@@ -26,10 +26,15 @@
 					</ul>
 				</li>
 				<li>
-					<a href="#" class="dropdown-toggle hvr-underline-from-center" id="dropdownResourcesMenu" data-toggle="dropdown" data-hover="dropdown" data-delay="700">Resources<b class="caret" style="font-size:14px"></b></a>
+					<a href="/Resources/Index" class="dropdown-toggle hvr-underline-from-center disabled" id="dropdownResourcesMenu" data-toggle="dropdown" data-hover="dropdown" data-delay="700">Resources<b class="caret" style="font-size:14px"></b></a>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownResourcesMenu">
 						<li role="menuitem">@Html.ActionLink("Resources", "Index", "Resources")</li>
 						<li class="divider"></li>
+						<li class="dropdown-header">Docs</li>
+						@* TODO: add content downloader here, much like the docs list in resources page *@
+						@*<li role="menuitem">@Html.</li>
+						<li role="menuitem">@Html.ActionLink("Resources", "Index", "Resources")</li>
+						<li role="menuitem">@Html.ActionLink("Resources", "Index", "Resources")</li>*@
 					</ul>
 				</li>
 			</ul>

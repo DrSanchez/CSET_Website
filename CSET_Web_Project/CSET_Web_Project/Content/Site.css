@@ -7,7 +7,7 @@
     background-image: url(cset_website_background.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-    font-size: 0.8em;
+    font-size: 1.5em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     margin-left: auto;
     margin-right: auto;
@@ -104,6 +104,25 @@ img.medSquare
 {
     width:8em;
     height:8em;
+}
+
+.docBox
+{
+	border: ridge;
+	border-color: black;
+	padding: 4px;
+	height: 35%;
+	width: 100%;
+	position: static;
+	background-color: steelblue;
+	text-align: center;
+}
+
+/* custom href styling for docBox items */
+.docHref
+{
+	font-size: large;
+	color: white;
 }
 
 /* Developing custom a href stylings */

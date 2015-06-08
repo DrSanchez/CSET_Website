@@ -1,15 +1,39 @@
-﻿
-@{
-    ViewBag.Title = "Resources";
+﻿@{
+	ViewBag.Title = "Resources";
 }
 
 <h2>Resources</h2>
 
-<div class="row">
-	<div class="col-md-2">
-
+<div id="resourceContainer" class="row">
+	<div id="docsContainer" class="col-md-2" >
+		<hr />
+		<div id="c_vs_cpp" class="docBox hvr-bob">
+			<a class="docHref" href="/Content/Documents/C_vs_Cpp.doc">
+				C vs. C++
+			</a>
+		</div>
+		<hr />
+		<div id="ie_and_sharepoint" class="docBox hvr-bob">
+			<a class="docHref" href="/Content/Documents/IE and sharepoint.doc">
+				IE and Sharepoint
+			</a>
+		</div>
+		<hr />
+		<div id="oit_code_style" class="docBox hvr-bob">
+			<a class="docHref" href="/Content/Documents/OIT_CodeStd_v2.0.doc">
+				OIT Code Style v2.0
+			</a>
+		</div>
+		<hr />
 	</div>
-	<div class="col-md-4">
+	<div id="navigatorContainer" class="col-md-4">
+		<div>
 
+		</div>
+		<div>
+
+		</div>
 	</div>
 </div>
+
+<script src="/Scripts/ViewHelpers/ResourceHelper.js"></script>
