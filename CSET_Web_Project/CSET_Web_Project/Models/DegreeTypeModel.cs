@@ -55,48 +55,48 @@ namespace CSET_Web_Project.Models
 		public DegreeType()
 		{ }
 
-		//public DegreeType(int id)
-		//{
-		//	GetDegreeTypeById(id);
-		//}
+		public DegreeType(int id)
+		{
+			GetDegreeTypeById(id);
+		}
 
-//		private void GetDegreeTypeById(int id)
-//		{
-//			mDegreeTypeId = id;
+		private void GetDegreeTypeById(int id)
+		{
+			mDegreeTypeId = id;
 
-//			ConnectSovereignDB tempConn = new ConnectSovereignDB("csetweb");
-//			tempConn.OpenConnection();
+			ConnectSovereignDB tempConn = new ConnectSovereignDB("csetweb");
+			tempConn.OpenConnection();
 
-//			try
-//			{
-//				SqlDataReader myReader = null;
-//				SqlParameter myParam = new SqlParameter("@myParam", SqlDbType.Int);
-//				myParam.Value = mDegreeTypeId;
+			try
+			{
+				SqlDataReader myReader = null;
+				SqlParameter myParam = new SqlParameter("@myParam", SqlDbType.Int);
+				myParam.Value = mDegreeTypeId;
 
-//				SqlCommand myCommand = new SqlCommand(@"SELECT short_name, long_name, description
-//                                                        FROM DegreeTypes
-//                                                        WHERE degree_type_id = @myParam", tempConn.myConnection);
-//				myCommand.Parameters.Add(myParam);
+				SqlCommand myCommand = new SqlCommand(@"SELECT short_name, long_name, description
+                                                        FROM DegreeTypes
+                                                        WHERE degree_type_id = @myParam", tempConn.myConnection);
+				myCommand.Parameters.Add(myParam);
 
-//				myReader = myCommand.ExecuteReader();
-//				if (!myReader.HasRows)
-//					throw new Exception("No record of a DegreeType with given id exists.");
-//				while (myReader.Read())
-//				{
-//					mShortName = myReader[0].ToString();
-//					mLongName = myReader[1].ToString();
-//					mDescription = myReader[2].ToString();
-//				}
-//			}
-//			catch (Exception f)
-//			{
-//				//Add log exception
-//				throw;
-//			}
-//			finally
-//			{
-//				tempConn.CloseConnection();
-//			}
-//		}
+				myReader = myCommand.ExecuteReader();
+				if (!myReader.HasRows)
+					throw new Exception("No record of a DegreeType with given id exists.");
+				while (myReader.Read())
+				{
+					mShortName = myReader[0].ToString();
+					mLongName = myReader[1].ToString();
+					mDescription = myReader[2].ToString();
+				}
+			}
+			catch (Exception f)
+			{
+				//Add log exception
+				throw;
+			}
+			finally
+			{
+				tempConn.CloseConnection();
+			}
+		}
 	}
 }

@@ -70,107 +70,107 @@ namespace CSET_Web_Project.Models
 		}
 		#endregion
 
-		//public Degree(int id)
-		//{
-		//	GetDegreeById(id);
-		//}
+		public Degree(int id)
+		{
+			GetDegreeById(id);
+		}
 
-//		public void GetDegreeById(int id)
-//		{
-//			mId = id;
+		public void GetDegreeById(int id)
+		{
+			mId = id;
 
-//			ConnectSovereignDB tempConn = new ConnectSovereignDB("csetweb");
-//			tempConn.OpenConnection();
+			ConnectSovereignDB tempConn = new ConnectSovereignDB("csetweb");
+			tempConn.OpenConnection();
 
-//			try
-//			{
-//				SqlDataReader myReader = null;
+			try
+			{
+				SqlDataReader myReader = null;
 
-//				SqlParameter myParam = new SqlParameter("@myParam", SqlDbType.Int);
-//				myParam.Value = mId;
+				SqlParameter myParam = new SqlParameter("@myParam", SqlDbType.Int);
+				myParam.Value = mId;
 
-//				SqlCommand myCommand = new SqlCommand(@"
-//                    SELECT short_name, long_name, official_description, active, degree_type_id, 
-//                        short_name_text 
-//                    FROM Degrees 
-//                    WHERE degree_id = @myParam", tempConn.myConnection);
-//				myCommand.Parameters.Add(myParam);
+				SqlCommand myCommand = new SqlCommand(@"
+                    SELECT short_name, long_name, official_description, active, degree_type_id, 
+                        short_name_text 
+                    FROM Degrees 
+                    WHERE degree_id = @myParam", tempConn.myConnection);
+				myCommand.Parameters.Add(myParam);
 
-//				myReader = myCommand.ExecuteReader();
-//				if (!myReader.HasRows)
-//					throw new Exception("No Degree is recorded with the given id.");
-//				while (myReader.Read())
-//				{
-//					mShortName = myReader[0].ToString();
-//					mLongName = myReader[1].ToString();
-//					mOfficialDesc = myReader[2].ToString();
-//					mActive = (bool)myReader[3];
-//					mDegreeType = new DegreeType(int.Parse(myReader[4].ToString()));
-//					mShortNameText = myReader[5].ToString();
-//				}
-//			}
-//			catch (Exception f)
-//			{
-//				//Add log exception
-//				throw;
-//			}
-//			finally
-//			{
-//				tempConn.CloseConnection();
-//			}
-//		}
+				myReader = myCommand.ExecuteReader();
+				if (!myReader.HasRows)
+					throw new Exception("No Degree is recorded with the given id.");
+				while (myReader.Read())
+				{
+					mShortName = myReader[0].ToString();
+					mLongName = myReader[1].ToString();
+					mOfficialDesc = myReader[2].ToString();
+					mActive = (bool)myReader[3];
+					mDegreeType = new DegreeType(int.Parse(myReader[4].ToString()));
+					mShortNameText = myReader[5].ToString();
+				}
+			}
+			catch (Exception f)
+			{
+				//Add log exception
+				throw;
+			}
+			finally
+			{
+				tempConn.CloseConnection();
+			}
+		}
 
-//		public static List<SelectListItem> GetListOfDegrees(int currentDegreeId = 1)
-//		{
-//			List<SelectListItem> tempList = new List<SelectListItem>();
+		public static List<SelectListItem> GetListOfDegrees(int currentDegreeId = 1)
+		{
+			List<SelectListItem> tempList = new List<SelectListItem>();
 
-//			ConnectSovereignDB tempConn = new ConnectSovereignDB("csetweb");
-//			tempConn.OpenConnection();
+			ConnectSovereignDB tempConn = new ConnectSovereignDB("csetweb");
+			tempConn.OpenConnection();
 
-//			try
-//			{
-//				SqlDataReader myReader = null;
+			try
+			{
+				SqlDataReader myReader = null;
 
-//				SqlCommand myCommand = new SqlCommand(@"
-//                    SELECT short_name_text, degree_id 
-//                    FROM Degrees", tempConn.myConnection);
+				SqlCommand myCommand = new SqlCommand(@"
+                    SELECT short_name_text, degree_id 
+                    FROM Degrees", tempConn.myConnection);
 
-//				myReader = myCommand.ExecuteReader();
+				myReader = myCommand.ExecuteReader();
 
-//				int tempCheck = 0;
+				int tempCheck = 0;
 
-//				while (myReader.Read())
-//				{
-//					tempCheck = int.Parse(myReader[1].ToString());
-//					if (tempCheck != currentDegreeId)
-//					{
-//						tempList.Add(new SelectListItem
-//						{
-//							Text = myReader[0].ToString(),
-//							Value = myReader[1].ToString()
-//						});
-//					}
-//					else
-//					{
-//						tempList.Add(new SelectListItem
-//						{
-//							Text = myReader[0].ToString(),
-//							Value = myReader[1].ToString(),
-//							Selected = true
-//						});
-//					}
-//				}
-//			}
-//			catch (Exception f)
-//			{
-//				//Add log exception
-//				throw;
-//			}
-//			finally
-//			{
-//				tempConn.CloseConnection();
-//			}
-//			return tempList;
-//		}
+				while (myReader.Read())
+				{
+					tempCheck = int.Parse(myReader[1].ToString());
+					if (tempCheck != currentDegreeId)
+					{
+						tempList.Add(new SelectListItem
+						{
+							Text = myReader[0].ToString(),
+							Value = myReader[1].ToString()
+						});
+					}
+					else
+					{
+						tempList.Add(new SelectListItem
+						{
+							Text = myReader[0].ToString(),
+							Value = myReader[1].ToString(),
+							Selected = true
+						});
+					}
+				}
+			}
+			catch (Exception f)
+			{
+				//Add log exception
+				throw;
+			}
+			finally
+			{
+				tempConn.CloseConnection();
+			}
+			return tempList;
+		}
 	}
 }

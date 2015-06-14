@@ -7,30 +7,54 @@
 	ViewBag.Title = "Faculty Profile - " + Model.FirstName + " " + Model.LastName;
 }
 
-<h2>@Model.FirstName @Model.LastName</h2>
+<hr />
+	<h2>@Model.FirstName @Model.LastName</h2>
+<hr />
 
-<div>
-
+<div class="row center-filled-div" style="margin-bottom: 10px;">
+	<div class="col-md-5" style="float: left">
+		<img src="/Content/Images/@Model.ImageFile.PathName" alt="@Model.FirstName" class="medSquare" style="margin-bottom: 5px;" /><br />
+		<b>Classes Taught:</b><br />
+		<ul>
+			@foreach (var i in Model.CoursesTaught)
+			{
+				<li>@i.ShortName - @i.LongName <a href="/Degrees/CourseDetails/@i.Id">Details</a></li>
+			}
+		</ul>
+	</div>
+	<div class="col-md-6" style="float: right;">
+		<b>Degrees:</b><br />
+		<ul>
+			@foreach (var i in Model.Degrees)
+			{
+				<li>@i</li>
+			}
+		</ul><br />
+		<table border="0" cellpadding="6" cellspacing="0">
+			<tr>
+				<td align="right">Preferred Name:</td>
+				<td style="padding-left: 2em;">@Model.PreferredName</td>
+			</tr>
+			<tr>
+				<td align="right">Faculty Title:</td>
+				<td style="padding-left: 2em;">@Model.Title</td>
+			</tr>
+			<tr>
+				<td align="right">Office Number:</td>
+				<td style="padding-left: 2em;">@Model.Office</td>
+			</tr>
+			<tr>
+				<td align="right">Office Phone:</td>
+				<td style="padding-left: 2em;">@Model.Phone</td>
+			</tr>
+			<tr>
+				<td align="right">Email:</td>
+				<td><a href="mailto:@Model.Email" style="padding-left: 2em;">@Model.Email</a></td>
+			</tr>
+			<tr>
+				<td align="right">Website:</td>
+				<td><a href="mailto:@Model.Website" style="padding-left: 2em;">@Model.Website</a></td>
+			</tr>
+		</table>
+	</div>
 </div>
-
-@* extended profile *@
-@*<img src="/Content/Images/@Model.ImageFile.PathName" alt="@Model.FirstName" class="medSquare" /><br />
-	<b>Preffered Name: </b>@Model.PreferredName<br />
-	<b>Title: </b>@Model.Title<br />
-	<b>Office Room Number: </b>@Model.Office<br />
-	<b>Phone Number: </b>@Model.Phone<br />
-	<b>Email: </b><a href="mailto:@Model.Email">@Model.Email</a><br />
-	<b>Website: </b><a href="@Model.Website">@Model.Website</a><br />
-	<b>Degrees:</b><br />
-	<ul>
-		@foreach (var i in Model.Degrees)
-		{
-			<li>@i</li>
-		}
-	</ul>
-	<b>Classes Taught:</b><br />
-	<ul>
-		@foreach (var i in Model.CoursesTaught)
-		{
-			<li>@i.ShortName - @i.LongName <a href="/Degrees/CourseDetails/@i.Id">Details</a></li>
-		}*@
